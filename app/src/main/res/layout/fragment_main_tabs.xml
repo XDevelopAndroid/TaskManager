@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="#D55D5D">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainTabs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabMode="scrollable" />
+
+        <Switch
+            android:id="@+id/switchFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:text="ALL"
+            android:textAllCaps="true"
+            android:textOff="ALL"
+            android:textOn="Filtered"
+            tools:ignore="HardcodedText,NewApi,UnusedAttribute" />
+
+        <ImageButton
+            android:id="@+id/buttonAddSublist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="@string/drawer_item_add_todo"
+            android:padding="7dp"
+            android:src="@drawable/ic_add_circle"
+            tools:ignore="NewApi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:background="#D55D5D">
+
+        <EditText
+            android:id="@+id/inputHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edittext_send"
+            android:hint="@string/fast_add"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColorHint="#B3000000"
+            tools:ignore="Autofill" />
+
+        <ImageButton
+            android:id="@+id/buttonAddFastTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/drawer_item_add_todo"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+        app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

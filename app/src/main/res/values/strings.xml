@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Task Manager</string>
+    <string name="drawer_header">Drawer Header</string>
+    <string name="drawer_item_test_primary">Primary</string>
+    <string name="drawer_item_test_sec">Secondary</string>
+    <string name="drawer_item_add_todo">Yangi ro\'yxat</string>
+    <string name="drawer_item_edit_todo">Ro\'yxatni o\'zgartirish</string>
+    <string name="drawer_item_deleted_todo">O\'chirilgan vazifalar</string>
+    <string name="drawer_item_all_todo">Barcha vazifalar</string>
+    <string name="drawer_item_history_todo">Vazifalar tarixi</string>
+    <string name="drawer_item_terms">Foydalanish shartlari</string>
+    <string name="drawer_item_instr_todo">Foydalanish yo\'riqnomasi</string>
+    <string name="drawer_item_connect">Bog\'lanish</string>
+    <string name="temp_task_name">Ro\'yxat nomi</string>
+    <string name="temp_task_name_edit">Nomni kiriting</string>
+    <string name="toast_choose_color">Rang tanlang!</string>
+    <string name="toast_fill_field">Nomni kiriting!</string>
+    <string name="drawer_item_delete">Ro\'yxatni o\'chirish</string>
+    <string name="fast_add">Tezkor vazifa</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="testItem">android:id=\"@+id/floating_menu_background\"         android:layout_width=\"match_parent\"         android:layout_height=\"match_parent\"         android:background=\"#55000000\"         android:visibility=\"gone\"</string>
+    <string name="delete">O\'chirish</string>
+    <string name="edit">O\'zgartirish</string>
+    <string name="finish">Tugatish</string>
+    <string name="cancel">Bekor qilish</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_forever">Butunlay o\'chirish</string>
+    <string name="restore">Qayta yuklash</string>
+    <string name="copy">Nusxalash</string>
+    <string name="drawer_item_share">Bo\'lishish</string>
+    <string name="dalee">Keyingi</string>
+    <string name="res1_header">Header</string>
+    <string name="res1_info">Info</string>
+</resources>

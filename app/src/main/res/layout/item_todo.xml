@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    tools:background="@color/colorPrimary"
+    tools:ignore="ContentDescription,HardcodedText">
+
+    <FrameLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#66FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessLeaf" />
+
+    <FrameLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#66FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="UselessLeaf" />
+
+    <LinearLayout
+        android:id="@+id/layoutImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        app:layout_constraintBottom_toBottomOf="@id/layoutTop"
+        app:layout_constraintRight_toRightOf="@id/text_info"
+        app:layout_constraintTop_toBottomOf="@id/layoutTop"
+        tools:ignore="RtlHardcoded">
+
+        <ImageView
+            android:id="@+id/image_emotions"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/emotion_1" />
+
+        <ImageView
+            android:id="@+id/image_sticker"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/sticker_1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_alarm"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_baseline_add_alarm"
+        app:layout_constraintBottom_toBottomOf="@id/layoutTop"
+        app:layout_constraintLeft_toLeftOf="@id/text_info"
+        app:layout_constraintTop_toTopOf="@id/layoutTop" />
+
+    <TextView
+        android:id="@+id/text_info"
+        style="@style/Text.Info"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:lines="4"
+        android:textColor="#99000000"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/layoutList"
+        app:layout_constraintTop_toBottomOf="@id/layoutTop"
+        tools:text="@tools:sample/lorem/random" />
+
+    <LinearLayout
+        android:id="@+id/layoutList"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+        app:layout_constraintTop_toBottomOf="@id/text_info"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/checkbox_unchecked" />
+
+            <TextView
+                style="@style/Text.Info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                tools:ignore="RtlSymmetry"
+                tools:text="@tools:sample/lorem" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/checkbox_unchecked" />
+
+            <TextView
+                style="@style/Text.Info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                tools:ignore="RtlSymmetry"
+                tools:text="@tools:sample/lorem" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/checkbox_unchecked" />
+
+            <TextView
+                style="@style/Text.Info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                tools:ignore="RtlSymmetry"
+                tools:text="@tools:sample/lorem" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/checkbox_unchecked" />
+
+            <TextView
+                style="@style/Text.Info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                tools:ignore="RtlSymmetry"
+                tools:text="@tools:sample/lorem" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textAlarm"
+        style="@style/Text.Info"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_alarm"
+        app:layout_constraintLeft_toRightOf="@id/img_alarm"
+        app:layout_constraintTop_toTopOf="@id/img_alarm"
+        tools:text="01.01.2020" />
+
+    <ImageView
+        android:id="@+id/img_love"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintRight_toRightOf="@id/layoutImages"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/love1" />
+
+    <TextView
+        android:id="@+id/textTimer"
+        style="@style/Text.Info"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/checkbox"
+        app:layout_constraintRight_toRightOf="@id/layoutBottom"
+        app:layout_constraintTop_toTopOf="@id/checkbox"
+        tools:text="35:20:10" />
+
+    <ImageView
+        android:id="@+id/checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/unchecked"
+        app:layout_constraintBottom_toBottomOf="@id/layoutBottom"
+        app:layout_constraintLeft_toLeftOf="@id/layoutBottom" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:numStars="3"
+        android:rating="1"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:stepSize="1"
+        app:layout_constraintBottom_toBottomOf="@id/layoutBottom"
+        app:layout_constraintLeft_toLeftOf="@id/layoutBottom"
+        app:layout_constraintRight_toRightOf="@id/layoutBottom"
+        app:layout_constraintTop_toTopOf="@id/layoutBottom" />
+
+    <View
+        android:id="@+id/action_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NewApi" />
+
+    <HorizontalScrollView
+        android:id="@+id/chipsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:scrollbars="horizontal"
+                app:chipSpacing="5dp"
+                app:singleLine="true" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

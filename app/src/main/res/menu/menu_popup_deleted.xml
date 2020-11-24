@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/popup_menu_delete_forever"
+        android:icon="@drawable/ic_delete_popup"
+        android:title="@string/delete_forever"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/popup_menu_restore"
+        android:icon="@drawable/ic_baseline_restore_24"
+        android:title="@string/restore"
+        app:showAsAction="ifRoom" />
+</menu>

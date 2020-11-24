@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.AddTodoActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:ignore="NewApi">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription,HardcodedText">
+
+            <FrameLayout
+                android:id="@+id/layoutTop"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#4DFFFFFF"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UselessLeaf" />
+
+            <FrameLayout
+                android:id="@+id/layoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#4DFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="UselessLeaf" />
+
+            <ImageView
+                android:id="@+id/img_alarm"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_add_alarm"
+                app:layout_constraintBottom_toBottomOf="@id/layoutTop"
+                app:layout_constraintLeft_toLeftOf="@id/textInfo"
+                app:layout_constraintTop_toTopOf="@id/layoutTop" />
+
+            <EditText
+                android:id="@+id/textInfo"
+                style="@style/Text.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_multiline"
+                android:gravity="top|left"
+                android:hint="Vazifani bu yerga yozing!"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textColor="#99000000"
+                android:textCursorDrawable="@drawable/color_cursor"
+                app:layout_constraintBottom_toTopOf="@id/ratingBar"
+                app:layout_constraintTop_toBottomOf="@id/layoutTop"
+                tools:ignore="Autofill,LabelFor,RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/image_sticker"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_add_sticker"
+                app:layout_constraintBottom_toBottomOf="@id/layoutTop"
+                app:layout_constraintRight_toRightOf="@id/textInfo"
+                app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+            <ImageView
+                android:id="@+id/image_emotions"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_insert_emoticon"
+                app:layout_constraintBottom_toBottomOf="@id/layoutTop"
+                app:layout_constraintRight_toLeftOf="@id/image_sticker"
+                app:layout_constraintTop_toBottomOf="@id/layoutTop" />
+
+            <LinearLayout
+                android:id="@+id/layoutList"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+                app:layout_constraintTop_toBottomOf="@id/textInfo"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/checkbox_unchecked" />
+
+                    <TextView
+                        style="@style/Text.Info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="@tools:sample/lorem" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/checkbox_unchecked" />
+
+                    <TextView
+                        style="@style/Text.Info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="@tools:sample/lorem" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/checkbox_unchecked" />
+
+                    <TextView
+                        style="@style/Text.Info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="@tools:sample/lorem" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/checkbox_unchecked" />
+
+                    <TextView
+                        style="@style/Text.Info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="1"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="@tools:sample/lorem" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textAlarm"
+                style="@style/Text.EditText"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/img_alarm"
+                app:layout_constraintLeft_toRightOf="@id/img_alarm"
+                app:layout_constraintTop_toTopOf="@id/img_alarm"
+                tools:text="01.01.2020" />
+
+            <ImageView
+                android:id="@+id/img_love"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintRight_toRightOf="@id/image_sticker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTimer"
+                style="@style/Text.EditText"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/checkbox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/checkbox"
+                tools:text="35:20:10" />
+
+            <ImageView
+                android:id="@+id/checkbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_check_circle"
+                app:layout_constraintBottom_toBottomOf="@id/layoutBottom"
+                app:layout_constraintLeft_toLeftOf="@id/layoutBottom" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:clickable="false"
+                android:numStars="3"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:stepSize="1"
+                app:layout_constraintBottom_toTopOf="@id/chipsLayout"
+                app:layout_constraintLeft_toLeftOf="@id/layoutBottom"
+                app:layout_constraintRight_toRightOf="@id/layoutBottom"
+                app:layout_constraintTop_toBottomOf="@id/textInfo" />
+
+            <HorizontalScrollView
+                android:id="@+id/chipsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/saveButton"
+                app:layout_constraintTop_toBottomOf="@id/ratingBar">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="RtlHardcoded">
+
+                    <EditText
+                        android:id="@+id/textTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/add_chip"
+                        android:hint="#tag"
+                        android:inputType="textMultiLine"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        tools:ignore="Autofill" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:scrollbars="horizontal"
+                        app:chipSpacing="5dp"
+                        app:singleLine="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/saveButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/check_button"
+                app:layout_constraintBottom_toTopOf="@id/layoutBottom"
+                app:layout_constraintRight_toRightOf="@id/layoutBottom"
+                app:layout_constraintTop_toTopOf="@id/layoutBottom" />
+
+            <View
+                android:id="@+id/layoutForInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

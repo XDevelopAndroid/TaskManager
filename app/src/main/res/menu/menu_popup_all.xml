@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/popup_menu_delete"
+        android:icon="@drawable/ic_delete_popup"
+        android:title="@string/delete" />
+
+    <item
+        android:id="@+id/popup_menu_edit"
+        android:icon="@drawable/ic_edit_popup"
+        android:title="@string/edit" />
+
+    <item
+        android:id="@+id/popup_menu_finish"
+        android:icon="@drawable/ic_finish"
+        android:title="@string/finish" />
+
+    <item
+        android:id="@+id/popup_menu_cancel"
+        android:icon="@drawable/ic_cancelled"
+        android:title="@string/cancel" />
+</menu>
